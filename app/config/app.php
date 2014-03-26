@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/lara/laravel/',
+	'url' => 'http://localhost/isn-laravel/',
 
 	/*
 	|--------------------------------------------------------------------------

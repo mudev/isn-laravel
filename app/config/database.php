@@ -54,8 +54,9 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'isndb',
+			'host'      => 'localhost:3306',
+			'database'  => 'authapp',
+			'unix_socket'   => '/tmp/mysql.sock',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
