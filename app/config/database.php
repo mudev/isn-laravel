@@ -54,11 +54,11 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost:3306',
+			'host'      => 'localhost',
 			'database'  => 'authapp',
-			'unix_socket'   => '/tmp/mysql.sock',
+			'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'toor',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

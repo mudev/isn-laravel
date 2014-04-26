@@ -43,7 +43,15 @@ Route::filter('auth.basic', function()
 {
 	return Auth::basic();
 });
+Route::filter('styles', function()
+{
+	Asset::add('styles', 'css/styles.css');
 
+});
+Route::filter('scripts', function()
+{
+	Asset::add('jquery', 'js/jquery-min.js');
+});
 /*
 |--------------------------------------------------------------------------
 | Guest Filter

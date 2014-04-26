@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 return array(
 
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/isn-laravel/',
+	'url' => 'http://localhost:8888/isn-laravel/public/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,6 +80,7 @@ return array(
 
 	'providers' => array(
 
+		'Cartalyst\Sentry\SentryServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -106,6 +107,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Dragonfire1119\Asset\AssetServiceProvider'
 
 	),
 
@@ -137,6 +139,7 @@ return array(
 
 		'App'             => 'Illuminate\Support\Facades\App',
 		'Artisan'         => 'Illuminate\Support\Facades\Artisan',
+		'Asset'			  => 'Dragonfire1119\Asset\Facades\Asset',
 		'Auth'            => 'Illuminate\Support\Facades\Auth',
 		'Blade'           => 'Illuminate\Support\Facades\Blade',
 		'Cache'           => 'Illuminate\Support\Facades\Cache',
@@ -165,6 +168,7 @@ return array(
 		'Response'        => 'Illuminate\Support\Facades\Response',
 		'Route'           => 'Illuminate\Support\Facades\Route',
 		'Schema'          => 'Illuminate\Support\Facades\Schema',
+		'Sentry'		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 		'Seeder'          => 'Illuminate\Database\Seeder',
 		'Session'         => 'Illuminate\Support\Facades\Session',
 		'SSH'             => 'Illuminate\Support\Facades\SSH',
@@ -172,7 +176,6 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
 	),
 
 );
