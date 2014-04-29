@@ -1,0 +1,180 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.26/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 warn package.json isn-laravel@0.1.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Applications/MAMP/htdocs/isn-laravel',
+6 verbose install   [ 'grunt',
+6 verbose install     'grunt-contrib-imagemin',
+6 verbose install     'grunt-contrib-compass',
+6 verbose install     'grunt-concurrent',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'bootstrap-sass' ] ]
+7 info preinstall isn-laravel@0.1.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-contrib-compass@~0.5.0 /Applications/MAMP/htdocs/isn-laravel
+10 verbose already installed skipping grunt@~0.4.1 /Applications/MAMP/htdocs/isn-laravel
+11 verbose already installed skipping grunt-contrib-imagemin@~0.5.0 /Applications/MAMP/htdocs/isn-laravel
+12 verbose cache add [ 'grunt-concurrent@~0.3.0', null ]
+13 verbose cache add name=undefined spec="grunt-concurrent@~0.3.0" args=["grunt-concurrent@~0.3.0",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'grunt-concurrent@~0.3.0',
+14 verbose parsed url   path: 'grunt-concurrent@~0.3.0',
+14 verbose parsed url   href: 'grunt-concurrent@~0.3.0' }
+15 verbose cache add name="grunt-concurrent" spec="~0.3.0" args=["grunt-concurrent","~0.3.0"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '~0.3.0',
+16 verbose parsed url   path: '~0.3.0',
+16 verbose parsed url   href: '~0.3.0' }
+17 verbose addNamed [ 'grunt-concurrent', '~0.3.0' ]
+18 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+19 verbose cache add [ 'bootstrap-sass@~2.0', null ]
+20 verbose cache add name=undefined spec="bootstrap-sass@~2.0" args=["bootstrap-sass@~2.0",null]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'bootstrap-sass@~2.0',
+21 verbose parsed url   path: 'bootstrap-sass@~2.0',
+21 verbose parsed url   href: 'bootstrap-sass@~2.0' }
+22 verbose cache add name="bootstrap-sass" spec="~2.0" args=["bootstrap-sass","~2.0"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: '~2.0',
+23 verbose parsed url   path: '~2.0',
+23 verbose parsed url   href: '~2.0' }
+24 verbose addNamed [ 'bootstrap-sass', '~2.0' ]
+25 verbose addNamed [ null, '>=2.0.0-0 <2.1.0-0' ]
+26 verbose already installed skipping grunt-contrib-watch@~0.6.1 /Applications/MAMP/htdocs/isn-laravel
+27 silly lockFile 339cc45a-grunt-concurrent-0-3-0 grunt-concurrent@~0.3.0
+28 verbose lock grunt-concurrent@~0.3.0 /Users/mu/.npm/339cc45a-grunt-concurrent-0-3-0.lock
+29 silly lockFile 55ed6a58-bootstrap-sass-2-0 bootstrap-sass@~2.0
+30 verbose lock bootstrap-sass@~2.0 /Users/mu/.npm/55ed6a58-bootstrap-sass-2-0.lock
+31 silly addNameRange { name: 'grunt-concurrent',
+31 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+31 silly addNameRange   hasData: false }
+32 silly addNameRange { name: 'bootstrap-sass',
+32 silly addNameRange   range: '>=2.0.0-0 <2.1.0-0',
+32 silly addNameRange   hasData: false }
+33 verbose url raw grunt-concurrent
+34 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-concurrent' ]
+35 verbose url resolved https://registry.npmjs.org/grunt-concurrent
+36 info trying registry request attempt 1 at 14:19:37
+37 http GET https://registry.npmjs.org/grunt-concurrent
+38 verbose url raw bootstrap-sass
+39 verbose url resolving [ 'https://registry.npmjs.org/', './bootstrap-sass' ]
+40 verbose url resolved https://registry.npmjs.org/bootstrap-sass
+41 info trying registry request attempt 1 at 14:19:37
+42 http GET https://registry.npmjs.org/bootstrap-sass
+43 http 200 https://registry.npmjs.org/grunt-concurrent
+44 silly registry.get cb [ 200,
+44 silly registry.get   { date: 'Wed, 23 Apr 2014 13:19:40 GMT',
+44 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+44 silly registry.get     etag: '"AP6TIG6IYE921C141FGKME2RS"',
+44 silly registry.get     'content-type': 'application/json',
+44 silly registry.get     via: '1.1 varnish',
+44 silly registry.get     'cache-control': 'max-age=1',
+44 silly registry.get     'content-length': '16906',
+44 silly registry.get     'accept-ranges': 'bytes',
+44 silly registry.get     age: '191',
+44 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-lcy1120-LCY',
+44 silly registry.get     'x-cache': 'HIT, HIT',
+44 silly registry.get     'x-cache-hits': '1, 1',
+44 silly registry.get     'x-timer': 'S1398246793.714356184,VS0,VS40,VE133,VE12387089',
+44 silly registry.get     vary: 'Accept',
+44 silly registry.get     'keep-alive': 'timeout=10, max=50',
+44 silly registry.get     connection: 'Keep-Alive' } ]
+45 silly addNameRange number 2 { name: 'grunt-concurrent',
+45 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+45 silly addNameRange   hasData: true }
+46 silly addNameRange versions [ 'grunt-concurrent',
+46 silly addNameRange   [ '0.1.0',
+46 silly addNameRange     '0.1.1',
+46 silly addNameRange     '0.2.0',
+46 silly addNameRange     '0.3.0',
+46 silly addNameRange     '0.3.1',
+46 silly addNameRange     '0.4.0',
+46 silly addNameRange     '0.4.1',
+46 silly addNameRange     '0.4.2',
+46 silly addNameRange     '0.4.3',
+46 silly addNameRange     '0.5.0' ] ]
+47 verbose addNamed [ 'grunt-concurrent', '0.3.1' ]
+48 verbose addNamed [ '0.3.1', '0.3.1' ]
+49 silly lockFile 45ceb96e-grunt-concurrent-0-3-1 grunt-concurrent@0.3.1
+50 verbose lock grunt-concurrent@0.3.1 /Users/mu/.npm/45ceb96e-grunt-concurrent-0-3-1.lock
+51 silly lockFile 6a6b6684-rrent-grunt-concurrent-0-3-1-tgz https://registry.npmjs.org/grunt-concurrent/-/grunt-concurrent-0.3.1.tgz
+52 verbose lock https://registry.npmjs.org/grunt-concurrent/-/grunt-concurrent-0.3.1.tgz /Users/mu/.npm/6a6b6684-rrent-grunt-concurrent-0-3-1-tgz.lock
+53 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-concurrent/-/grunt-concurrent-0.3.1.tgz',
+53 verbose addRemoteTarball   '0ceed6add526cc63f87fa40e90287988d9e17a8e' ]
+54 info retry fetch attempt 1 at 14:19:40
+55 verbose fetch to= /var/folders/sl/5wzz1xvj01ddhcl2jk19z_fh0000gn/T/npm-1625-E5dya0mY/1398259180703-0.20834707375615835/tmp.tgz
+56 http GET https://registry.npmjs.org/grunt-concurrent/-/grunt-concurrent-0.3.1.tgz
+57 http 200 https://registry.npmjs.org/bootstrap-sass
+58 silly registry.get cb [ 200,
+58 silly registry.get   { date: 'Wed, 23 Apr 2014 13:19:40 GMT',
+58 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+58 silly registry.get     etag: '"49OK5OVQU6EMNAIO36TPGLTV8"',
+58 silly registry.get     'content-type': 'application/json',
+58 silly registry.get     via: '1.1 varnish',
+58 silly registry.get     'cache-control': 'max-age=1',
+58 silly registry.get     'content-length': '18423',
+58 silly registry.get     'accept-ranges': 'bytes',
+58 silly registry.get     age: '0',
+58 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-lcy1120-LCY',
+58 silly registry.get     'x-cache': 'MISS, MISS',
+58 silly registry.get     'x-cache-hits': '0, 0',
+58 silly registry.get     'x-timer': 'S1398259180.570716619,VS0,VS43,VE228,VE268',
+58 silly registry.get     vary: 'Accept',
+58 silly registry.get     'keep-alive': 'timeout=10, max=50',
+58 silly registry.get     connection: 'Keep-Alive' } ]
+59 silly addNameRange number 2 { name: 'bootstrap-sass',
+59 silly addNameRange   range: '>=2.0.0-0 <2.1.0-0',
+59 silly addNameRange   hasData: true }
+60 silly addNameRange versions [ 'bootstrap-sass', [ '2.3.2' ] ]
+61 silly lockFile 55ed6a58-bootstrap-sass-2-0 bootstrap-sass@~2.0
+62 silly lockFile 55ed6a58-bootstrap-sass-2-0 bootstrap-sass@~2.0
+63 error notarget No compatible version found: bootstrap-sass@'>=2.0.0-0 <2.1.0-0'
+63 error notarget Valid install targets:
+63 error notarget ["2.3.2"]
+63 error notarget
+63 error notarget This is most likely not a problem with npm itself.
+63 error notarget In most cases you or one of your dependencies are requesting
+63 error notarget a package version that doesn't exist.
+64 error System Darwin 12.5.0
+65 error command "/usr/local/Cellar/node/0.10.26/bin/node" "/usr/local/bin/npm" "install"
+66 error cwd /Applications/MAMP/htdocs/isn-laravel
+67 error node -v v0.10.26
+68 error npm -v 1.4.3
+69 error code ETARGET
+70 verbose exit [ 1, true ]
