@@ -1,8 +1,8 @@
 # Require any additional compass plugins here.
-require 'bootstrap-sass'
+
 # Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = ""
+http_path = "public"
+css_dir = "public/css"
 sass_dir = "sass"
-images_dir = "images"
-fonts_dir = "css/fonts"
+images_dir = "public/images"
+javascripts_dir = "public/js"
