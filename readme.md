@@ -5,7 +5,7 @@
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling.    Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
 ## Angular
 
-[AngularJS](https://angularjs.org/)is an open-source web application framework, maintained by Google and community, that assists with creating single-page applications
+[AngularJS](https://angularjs.org/) is an open-source web application framework, maintained by Google and community, that assists with creating single-page applications
 
 ## Compass / Bourbon
 
