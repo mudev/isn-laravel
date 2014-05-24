@@ -1,2 +1,2 @@
-<link href="{{ URL::asset('css/main.css') }}" rel="stylesheet">
+<link href="{{ URL::asset('css/styles.css') }}" rel="stylesheet">
 

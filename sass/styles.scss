@@ -1,6 +1,10 @@
 @import "bourbon/bourbon";
+@import "neat/neat";
+@import "bitters/bitters";
 @import "compass/reset";
 @import "compass/css3/font-face";
+@import "compass/utilities/general/clearfix";
+@import "mixins";
 
 @mixin rounded_borders($color, $ca, $cb, $cc, $cd, $width) {
     -moz-border-radius: $ca $cb $cc $cd;
@@ -10,62 +14,30 @@
     border-radius: $ca $cb $cc $cd;
     border: $width $color solid;
 }
-@include font-face("lato-light", font-files("lato-light-webfont.woff", "lato-light-webfont.ttf", "lato-light-webfont.eot", "lato-light-webfont.svg"));
 @include font-face("lato", font-files("lato-regular-webfont.woff", "lato-regular-webfont.ttf", "lato-regular-webfont.eot", "lato-regular-webfont.svg"));
+@include font-face("lato-light", font-files("lato-light-webfont.woff", "lato-light-webfont.ttf", "lato-light-webfont.eot", "lato-light-webfont.svg"));
 
-// Colours
+// Colours inspired by http://www.colourlovers.com/palette/1473/Ocean_Five
 $blue: rgba(40, 113, 217,1);
-$purps: rgba(70, 40, 217,1);
+$purps: rgba(107, 0, 176,1);
 $sky: rgba(80, 209, 227,1);
 $brg: rgba(0, 66, 80,1);
-$lime: rgba(188, 238, 44,1);
-$sand: rgba(255, 130, 47,1);
+$lime: rgba(86, 208, 71,1);
+$sand: rgba(237, 201, 81,1);
 $lilac: rgba(149, 23, 237,1);
-$ruby:rgba(208,2,27,1);
+$ruby:rgba(204,51,63,1);
 $white: rgba(255,255,255,1);
 
-body {
-  position: relative;
-  background: url('../images/vworld.png') no-repeat center center fixed;
-    background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
-    -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */
-    -moz-background-size: cover; /* optional for Firefox 3.6 */
-    -o-background-size: cover; /* for Opera 9.5 */
-    margin: 0; /* to remove the default white margin of body */
-    padding: 0; /* to remove the default white margin of body */
-  font-family: "lato-light", sans-serif;
+$medium-screen : new-breakpoint(min-width 800px);
 
-}
-.entry {
-  @include display(flex);
-  @include flex-flow(row wrap);
-  @include justify-content(space-between);
-}
-.central {
-  margin: 0 auto;
+body {
+  background: url('../images/vworld.jpg') no-repeat top center;
+  max-width: 100%;
+  font-family: "lato-light", sans-serif;
   @include display(flex);
   @include justify-content(center);
   @include flex-direction(column);
-  width: 45em;
-}
-.ccard {
-  display: block;
-  z-index: 21;
-  width: 162px;
-  height: auto;
-  margin: 0;
-}
-.tagline {
-  position: relative;
-  width: 100%;
-  padding: 1em 0;
-  font-family: "lato-light", sans-serif;
-  h1 {
-    font-size: 1.875rem;
-  }
-  h2 {
-    font-size: 1em;
-  }
+  @include flex-flow(wrap);
 }
 .header {
   position: relative;
@@ -86,49 +58,72 @@ body {
     top: 50%;
   }
 }
-.login {
+.tagline {
   position: relative;
-  width: 20.688rem;
-  height: 13.875rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+  font-family: "lato-light", sans-serif;
+  h1 {
+    font-size: 1.875rem;
+  }
+  h2 {
+    font-size: 1em;
+  }
+}
+.central {
+  @include outer-container;
+  max-width: 42em;
+}
+.entry {
+  @include span-columns(12);
+  a{
+    text-decoration: none;
+  }
+}
+.first_login {
+  @include span-columns(4 of 12);
   background: url('../images/loginia.png') no-repeat top left;
   background-color: $purps;
-  overflow: hidden;
-  flex: 0 0 48%;
+
 }
-.signup {
-  position: relative;
-  width: 20.688rem;
-  height: 13.875rem;
-  margin: 0;
+.first_signup {
+  @include span-columns(4 of 12);
   background: $ruby url('../images/signupia.png') no-repeat top left;
-  overflow: hidden;
-  flex: 0 0 48%;
 }
-.frontmain {
-  @include display(inline-flex);
-  @include flex-flow(row multiline);
-  @include justify-content(space-between);
+.loader {
+  @include span-columns(12);
+  @include row;
+}
+.frontmain{
   position: relative;
   z-index: 13;
   width: 100%;
-  height: 442px;
+  height: 20.688em;
   margin: 0;
   background: url('../images/scape.png') no-repeat bottom left;
-  background-color: $sky;
+  @include pane_color(frontmain);
   img {
-    padding-left: 10.8%;
-    padding-top: 12.5%;
     height: 13.875em;
     width: 10.438em;
   }
-  p {
-    @include flex-grow(2) ;
+  figcaption {
     font-size: 1.25rem;
-    padding-top: 14.625%;
-    padding-left:1rem;
+    color: white;
   }
+}
+.login {
+
+}
+.signup {
+
+}
+.ccard {
+  display: block;
+  z-index: 21;
+  width: 162px;
+  height: auto;
+  margin: 0;
 }
 .c2a_title {
   margin: 25%;
@@ -139,20 +134,133 @@ body {
   font-weight: 400;
   color: $white;
 }
-.footer {
-  float: left;
-  width: 100%;
-  height: 50px;
-  margin-top: 20px;
-  background-color: $brg;
-  ul {
+.hover-tile-outer {
 
-    li {
-      float: left;
+  $hover-tile-height: 13.875em;
+  background-position: bottom;
+  background-size: cover;
+
+  background-size: cover;
+
+  border: 1px solid $base-border-color;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  cursor: pointer;
+  @include span-columns(6 of 12);
+
+  // @include media($medium-screen) {
+  //   width: 40%;
+  // }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, .2s ease-in-out);
+    background:inherit;
+    color: white;
+    height:inherit;
+    padding: 1em 1.5em;
+  }
+
+  .hover-tile-visible {
+    color: transparentize(white, .3);
+    font-size: 2em;
+    font-weight: 200;
+    padding-top: 2em;
+    text-align: center;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(black, .5);
+    h4 {
+      margin-bottom: .5em;
+    }
+    p {
+      color: transparentize(white, .3);
     }
   }
-  .text {
-    margin-top: 14px;
-    color: rgb(0,0,0);
+}
+
+.footer {
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-line-height*2 $gutter;
+  width: 100%;
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 2em;
+
+    img {
+      height: 3em;
+    }
+  }
+
+  .footer-links {
+    @include clearfix;
+    margin-bottom: $base-line-height;
+
+    @include media($medium-screen) {
+      @include shift(3);
+    }
+  }
+
+  ul {
+    margin-bottom: $base-line-height*2;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include omega(3n);
+      @include clearfix;
+    }
+  }
+
+  li {
+    text-align: center;
+
+    @include media($medium-screen) {
+      text-align: left;
+    }
+  }
+
+  li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  li h3 {
+    color: $footer-color;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: .4em;
+  }
+
+  hr {
+    border: 1px solid transparentize($footer-disclaimer-color, .3);
+    margin: 0 auto $base-line-height;
+    width: 12em;
+  }
+
+  p {
+    color: $footer-disclaimer-color;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center;
   }
 }

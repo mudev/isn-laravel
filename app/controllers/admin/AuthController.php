@@ -1,6 +1,6 @@
 <?php namespace App\Controllers\Admin;
 
-use Auth, BaseController, Form, Input, Redirect, Sentry, View;
+use Auth, BaseController, Form, Input, Redirect, Sentry, View, Notification;
 
 class AuthController extends BaseController {
 
@@ -12,7 +12,6 @@ class AuthController extends BaseController {
 	{
 		return View::make('admin.auth.login');
 	}
-
 	/**
 	 * Login action
 	 * @return Redirect
@@ -23,14 +22,12 @@ class AuthController extends BaseController {
 			'email'    => Input::get('email'),
 			'password' => Input::get('password')
 		);
-
 		try
 		{
 			$user = Sentry::authenticate($credentials, false);
-
 			if ($user)
 			{
-				return Redirect::route('admin.pages.index');
+				return Redirect::route('admin.ijobs.index');
 			}
 		}
 		catch(\Exception $e)
@@ -39,7 +36,6 @@ class AuthController extends BaseController {
 			Notification::error('The page was duh.');
 		}
 	}
-
 	/**
 	 * Logout action
 	 * @return Redirect
@@ -50,5 +46,4 @@ class AuthController extends BaseController {
 
 		return Redirect::route('admin.login');
 	}
-
 }

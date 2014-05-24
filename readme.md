@@ -11,11 +11,15 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 ## Compass / Bourbon
 
 [Compass](http://compass-style.org/) is an open-source CSS Authoring Framework.
+
 [Bourbon](http://bourbon.io/) A simple and lightweight mixin library for Sass
+
 [Browser-sync](http://browsersync.io) keeps multiple browsers & devices in sync when building websites.
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
-Bourbon is Copyright © 2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+The Laravel framework : open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+Bourbon : Copyright © 2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+
 Browser-sync : Copyright (c) 2014 Shane Osbourne Licensed under the GPL license.

@@ -5,17 +5,19 @@
     <h2>Looking for translators or translation work?</h2>
   </div>
   <div class="entry">
-    <div class="login">
+    <a class="first_login" href="#">
       <h1 class="c2a_title">Login</h1>
-    </div>
-    <div class="signup">
+    </a>
+    <a class="first_signup" href="#">
       <h1 class="c2a_title">Sign Up</h1>
-    </div>
+    </a>
   </div>
-  <div class="frontmain">
-    <img class="ccard" src="images/ccard.png">
-    <p class="">Join the fastest growing network for translation jobs in the UK.</p>
-    <h3 class="">Welcome to ISN</h3>
+  <div class="loader">
+    <figure class="frontmain">
+      <img class="ccard" src="images/ccard.png">
+      <figcaption class="">Join the fastest growing network for translation jobs in the UK.</figcaption>
+    </figure>
+    <?= $login ?>
   </div>
 </div>
 <?= $footer ?>

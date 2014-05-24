@@ -2,7 +2,7 @@
 
 use App\Models\Page;
 use App\Services\Validators\PageValidator;
-use Input, Notification, Redirect, Sentry, Str;
+use Input, Notification, Redirect, Sentry, Str, Notification;
 
 class PagesController extends \BaseController {
 
@@ -10,17 +10,14 @@ class PagesController extends \BaseController {
 	{
 		return \View::make('admin.pages.index')->with('pages', Page::all());
 	}
-
 	public function show($id)
 	{
 		return \View::make('admin.pages.show')->with('page', Page::find($id));
 	}
-
 	public function create()
 	{
 		return \View::make('admin.pages.create');
 	}
-
 	public function store()
 	{
 		$validation = new PageValidator;
@@ -41,7 +38,6 @@ class PagesController extends \BaseController {
 
 		return Redirect::back()->withInput()->withErrors($validation->errors);
 	}
-
 	public function edit($id)
 	{
 		return \View::make('admin.pages.edit')->with('page', Page::find($id));

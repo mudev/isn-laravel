@@ -1,0 +1,11 @@
+@mixin pane_color($switchpane) {
+	@if $switchpane == frontmain {
+		background-color:$sky;
+	}
+	@else if $switchpane == login {
+		background-color: $ruby;
+	}
+	@else {
+		background-color: $purps;
+	}
+}

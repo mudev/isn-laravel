@@ -13,17 +13,17 @@ class JobsController extends \BaseController {
 
 	public function index()
 	{
-		return \View::make('admin.articles.index')->with('isnjobs', Isnjob::all());
+		return \View::make('admin.ijobs.index')->with('isnjobs', Isnjob::all());
 	}
 
 	public function show($id)
 	{
-		return \View::make('admin.articles.show')->with('isnjob',Isnjob::find($id));
+		return \View::make('admin.ijobs.show')->with('isnjob',Isnjob::find($id));
 	}
 
 	public function create()
 	{
-		return \View::make('admin.articles.create');
+		return \View::make('admin.ijobs.create');
 	}
 
 	public function store()
@@ -32,23 +32,23 @@ class JobsController extends \BaseController {
 
 		if ($validation->passes())
 		{
-			$article = new Isnjob;
-			$article->title   = Input::get('title');
-			$article->slug    = Str::slug(Input::get('title'));
-			$article->body    = Input::get('body');
-			$article->user_id = Sentry::getUser()->id;
-			$article->save();
+			$ijob = new Isnjob;
+			$ijob->title   = Input::get('title');
+			$ijob->slug    = Str::slug(Input::get('title'));
+			$ijob->body    = Input::get('body');
+			$ijob->user_id = Sentry::getUser()->id;
+			$ijob->save();
 
 			// Now that we have the article ID we need to move the image
 			if (Input::hasFile('image'))
 			{
-				$article->image = Image::upload(Input::file('image'), 'articles/' . $article->id);
-				$article->save();
+				$ijob->image = Image::upload(Input::file('image'), 'articles/' . $ijob->id);
+				$ijob->save();
 			}
 
 			Notification::success('The job was saved.');
 
-			return Redirect::route('admin.articles.edit', $article->id);
+			return Redirect::route('admin.ijobs.e dit', $ijob->id);
 		}
 
 		return Redirect::back()->withInput()->withErrors($validation->errors);
@@ -56,7 +56,7 @@ class JobsController extends \BaseController {
 
 	public function edit($id)
 	{
-		return \View::make('admin.articles.edit')->with('article', Isnjob::find($id));
+		return \View::make('admin.ijobs.edit')->with('article', Isnjob::find($id));
 	}
 
 	public function update($id)
@@ -65,17 +65,17 @@ class JobsController extends \BaseController {
 
 		if ($validation->passes())
 		{
-			$article = Isnjob::find($id);
-			$article->title   = Input::get('title');
-			$article->slug    = Str::slug(Input::get('title'));
-			$article->body    = Input::get('body');
-			$article->user_id = Sentry::getUser()->id;
-			if (Input::hasFile('image')) $article->image   = Image::upload(Input::file('image'), 'articles/' . $article->id);
-			$article->save();
+			$ijob = Isnjob::find($id);
+			$ijob->title   = Input::get('title');
+			$ijob->slug    = Str::slug(Input::get('title'));
+			$ijob->body    = Input::get('body');
+			$ijob->user_id = Sentry::getUser()->id;
+			if (Input::hasFile('image')) $ijob->image   = Image::upload(Input::file('image'), 'articles/' . $ijob->id);
+			$ijob->save();
 
 			Notification::success('The job was saved.');
 
-			return Redirect::route('admin.articles.edit', $article->id);
+			return Redirect::route('admin.ijobs.edit', $ijob->id);
 		}
 
 		return Redirect::back()->withInput()->withErrors($validation->errors);
@@ -83,12 +83,12 @@ class JobsController extends \BaseController {
 
 	public function destroy($id)
 	{
-		$article = Isnjob::find($id);
-		$article->delete();
+		$ijob = Isnjob::find($id);
+		$ijob->delete();
 
 		Notification::success('The job was deleted.');
 
-		return Redirect::route('admin.articles.index');
+		return Redirect::route('admin.ijobs.index');
 	}
 
 }

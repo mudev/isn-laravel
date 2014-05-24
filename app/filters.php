@@ -35,10 +35,10 @@ App::after(function($request, $response)
 
 Route::filter('auth.admin', function()
 {
-        if ( ! Sentry::check())
-        {
-                return Redirect::route('admin.login');
-        }
+    if ( ! Sentry::check())
+    {
+            return Redirect::route('admin.login');
+    }
 });
 Route::filter('styles', function()
 {

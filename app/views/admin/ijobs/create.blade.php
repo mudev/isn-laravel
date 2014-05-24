@@ -2,11 +2,11 @@
 
 @section('main')
 
-	<h2>Create new article</h2>
+	<h2>Create new Job</h2>
 
 	@include('admin._partials.notifications')
 
-	{{ Form::open(array('route' => 'admin.articles.store', 'files' => true)) }}
+	{{ Form::open(array('route' => 'admin.ijobs.store', 'files' => true)) }}
 
 		<div class="control-group">
 			{{ Form::label('title', 'Title') }}
@@ -38,7 +38,7 @@
 
 		<div class="form-actions">
 			{{ Form::submit('Save', array('class' => 'btn btn-success btn-save btn-large')) }}
-			<a href="{{ URL::route('admin.articles.index') }}" class="btn btn-large">Cancel</a>
+			<a href="{{ URL::route('admin.ijobs.index') }}" class="btn btn-large">Cancel</a>
 		</div>
 
 	{{ Form::close() }}

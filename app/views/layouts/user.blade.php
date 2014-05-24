@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="css/bootstrap-combined.min.css" rel="stylesheet">
         <style>
             table form { margin-bottom: 0; }
             form ul { margin-left: 0; list-style: none; }
